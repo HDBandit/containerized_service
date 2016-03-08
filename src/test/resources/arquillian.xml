@@ -5,8 +5,9 @@
     http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
     
     <extension qualifier="docker">
-	    <property name="serverVersion">1.9.1</property>
-	    <property name="serverUri">http://192.168.99.100:2375</property>
+	    <property name="serverVersion">${docker.api.version}</property>
+	    <property name="serverUri">http://dockerHost:2375</property>
+	    <property name="machineName">default</property>
 	    <property name="dockerContainers">
 	      containerized_service:
 	        buildImage: 
